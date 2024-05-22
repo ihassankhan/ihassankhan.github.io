@@ -9,13 +9,82 @@
 }
 body {
     height: 5000px;
-    background: #5c4e82;
+    color: #212529;
+    background-color: #f8f9fa; 
+}
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin: 0 0 10px;
+    color: #012c5a; /* Consistent heading color */
 }
 h1 {
     margin-right: auto;
     color: #edf0f1;
     font-size: 40px;
+}
+/* Paragraph Styles */
+p {
+    font-weight: normal;
+    margin: 0 0 15px;
+    line-height: 1.6;
+}
+/* CTA Button Styles */
+.cta-primary {
+    background-color: #012c5a;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600; /* Changed to numerical value for better consistency */
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
 
+.cta-primary:hover {
+    background-color: white;
+    color: #012c5a;
+    border: 2px solid #012c5a; /* Define the border color on hover */
+}
+
+.cta-secondary {
+    background-color: white;
+    color: #012c5a;
+    padding: 10px 20px;
+    border: 2px solid #012c5a; /* Make border consistent with primary */
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600; /* Changed to numerical value for better consistency */
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.cta-secondary:hover {
+    background-color: #012c5a;
+    color: white;
+}
+.cta-tertiary {
+    background-color: white;
+    color: #012c5a;
+    padding: 10px 20px;
+    border: 1px solid #012c5a;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: medium;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s ease; /* Smooth transition for hover effect */
+}
+.cta-tertiary:hover {
+    background-color: #012c5a;
+    color: white;
+    border: 1px solid white;
 }
 
 li,a,button {
@@ -26,10 +95,12 @@ li,a,button {
     text-decoration: none;
 }
 
+/*Header Styles*/
+
 header {
     position: sticky;
     top:0;
-    background: #1f253f;
+    background: #012c5a;
     transition: 2s;
     width: 100%;
     display: flex;
@@ -37,8 +108,6 @@ header {
     align-items: center;
     padding: 30px 10%;
 }
-
-
 
 ul{
     list-style: none;
@@ -52,25 +121,12 @@ li {
 }
 
 ul li a {
-    transition: all .8s ease 0s;
+    transition: all 0.2s ease; /* Smooth transition for hover effect */
 }
 
 li a:hover {
-    color: #0088a9;
-    transition: 2.5s;
-}
-
-button {
-    padding: 9px 25px;
-    background: rgba(0,136,169,1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all .8s ease 0s;
-}
-
-button:hover {
-    background-color: #5c4e82;
+    opacity: 90%;
+    transition: all 0.2s ease; /* Smooth transition for hover effect */
 }
 
 .sticky {
@@ -79,11 +135,28 @@ button:hover {
 }
 
 .sticky h1   {
-    color: #5c4e82;
+    color: #012c5a;
     
 }
 
 .sticky a {
-    color:#5c4e82
+    color:#012c5a
 }
 
+/* Add media query for mobile devices */
+
+@media only screen and (max-width: 425px) {
+    .nav__links {
+        display: flex;
+    }
+    .nav__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 6%;
+    }
+    li {
+        display: inline-block;
+        padding: 5px 20px;
+    }
+}
