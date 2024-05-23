@@ -109,6 +109,11 @@ header {
     padding: 30px 10%;
     z-index: 1;
 }
+@supports ((-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))) {
+    .fs__container {
+        background-color: rgba(255, 255, 255, 0.3); /* Adjust to blend with backdrop-filter */
+    }
+}
 .nav__header h1,a{
     color: #012c5a;
 }
