@@ -104,12 +104,11 @@ header {
     transition: 2s;
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
-    padding: 30px 10%;
+    padding: 5px 10%;
     z-index: 1;
 }
-
 .nav__header h1,a{
     color: #012c5a;
 }
@@ -262,8 +261,6 @@ li a:hover {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
 .footer__copyright {
     display: flex;
@@ -271,6 +268,7 @@ li a:hover {
 }
 .footer__column {
     width: -webkit-fill-available;
+    padding-left: 45px;
     
 }
 .footer__column h3 {
@@ -279,7 +277,7 @@ li a:hover {
 .footer__logo {
     font-size: 100px; /* Adjust font size as needed */
     display: flex;
-    padding: 15px;
+    padding-left: 15px;
 }
 
 .footer__nav {
@@ -312,13 +310,17 @@ li a:hover {
 
 /* Add media query for small screens */
 @media only screen and (max-width: 768px) {
+    .nav__header {
+        padding: 5px 7%;
+    }
     .footer__container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        align-items: flex-start;
     }
     .footer__column {
         width: 100%; /* Each column takes full width on small screens */
         margin-bottom: 30px; /* Add some space between columns */
+        padding-left: 0px;
     }
     .footer__social {
         margin-top: 20px; /* Add some space between social icons and heading */
@@ -349,7 +351,7 @@ li a:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 10px 6%;
+        padding: 5px;
     }
     li {
         display: inline-block;
@@ -358,4 +360,14 @@ li a:hover {
     .fs__text__col {
         align-items: flex-start;
     }
+    .footer__nav {
+        align-items: flex-start;
+    }
+    .footer__container {
+        flex-direction: column;
+    }
+    .footer__copyright {
+        padding: 0px 5%;
+    }
+
 }
