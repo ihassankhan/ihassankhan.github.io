@@ -18,11 +18,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-document.addEventListener('DOMContentLoaded', function() {
-    const fsContainer = document.querySelector('.fs__container');
-    const hasBackdropFilter = CSS.supports('backdrop-filter', 'blur(10px)') || CSS.supports('-webkit-backdrop-filter', 'blur(10px)');
-
-    if (!hasBackdropFilter) {
-        fsContainer.style.backgroundColor = 'rgba(255, 255, 255, 4)'; // Adjust as needed
-    }
-});
